@@ -1,0 +1,687 @@
+/* ================================================================
+   TRAVEL GUIDE - STYLESHEET
+   ================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f5f5f5;
+}
+
+/* ================================================================
+   UTILITY CLASSES
+   ================================================================ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center { text-align: center; }
+.muted { color: #888; font-size: 0.95em; }
+.hint { color: #666; font-size: 0.9em; }
+
+/* ================================================================
+   BUTTONS
+   ================================================================ */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.btn-logout {
+    background: none;
+    color: #e74c3c;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.btn-logout:hover {
+    color: #c0392b;
+}
+
+.wishlist-toggle.saved {
+    background: #27ae60;
+}
+
+.wishlist-toggle.saved:hover {
+    background: #229954;
+}
+
+/* ================================================================
+   FORMS
+   ================================================================ */
+
+.form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: none;
+    margin: 0 0 20px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="file"],
+.field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.field small {
+    display: block;
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+/* ================================================================
+   ALERTS
+   ================================================================ */
+
+.alert {
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid;
+}
+
+.alert strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.alert-error {
+    background: #fadbd8;
+    color: #c0392b;
+    border-left-color: #e74c3c;
+}
+
+.alert-success {
+    background: #d5f4e6;
+    color: #27ae60;
+    border-left-color: #2ecc71;
+}
+
+.alert-info {
+    background: #d6eaf8;
+    color: #2980b9;
+    border-left-color: #3498db;
+}
+
+/* ================================================================
+   NAVBAR
+   ================================================================ */
+
+.navbar {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    font-size: 1.5em;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.user-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.user-role {
+    font-size: 0.8em;
+    opacity: 0.9;
+}
+
+/* ================================================================
+   AUTH PAGES
+   ================================================================ */
+
+.auth-body {
+    background: linear-gradient(135deg, #0029e1 0%, #0087da 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-shell {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px;
+}
+
+.auth-side {
+    color: white;
+}
+
+.logo-big {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.auth-side h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.auth-side p {
+    font-size: 1.1em;
+    opacity: 0.95;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    padding: 10px 0;
+    font-size: 1.05em;
+    opacity: 0.9;
+}
+
+.auth-form-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.auth-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.auth-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.auth-card .muted {
+    margin-bottom: 30px;
+}
+
+.auth-foot {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.auth-foot a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.auth-foot a:hover {
+    text-decoration: underline;
+}
+
+.hint {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 3px solid #3498db;
+}
+
+/* ================================================================
+   APP PAGES
+   ================================================================ */
+
+.app-body {
+    background: #f5f5f5;
+}
+
+.app-main {
+    min-height: calc(100vh - 200px);
+    padding: 30px 0;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.page-header h1 {
+    font-size: 2em;
+}
+
+/* ================================================================
+   HERO SECTION
+   ================================================================ */
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    opacity: 0.95;
+    margin-bottom: 30px;
+}
+
+/* ================================================================
+   POSTS & CARDS
+   ================================================================ */
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.post-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.post-header h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.post-card p {
+    padding: 20px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.post-meta {
+    padding: 0 20px;
+    display: flex;
+    gap: 15px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.post-actions {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.badge {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+}
+
+.role-badge {
+    background: #2ecc71;
+}
+
+/* ================================================================
+   PROFILE
+   ================================================================ */
+
+.profile-wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+.profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #eee;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.profile-card h3 {
+    margin-bottom: 5px;
+}
+
+.profile-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.card-body {
+    padding: 15px 20px;
+}
+
+.card-body p {
+    margin: 5px 0;
+}
+
+.card-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+}
+
+.empty-state {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.empty-state p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+/* ================================================================
+   SECTION
+   ================================================================ */
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+
+@media (max-width: 768px) {
+    .auth-shell {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .auth-side {
+        display: none;
+    }
+
+    .profile-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .post-card,
+    .wishlist-card {
+        grid-column: span 1;
+    }
+
+    .navbar-inner {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-user {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
