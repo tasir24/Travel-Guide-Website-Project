@@ -101,9 +101,9 @@ Travel cost calculator based on:
 
 ## Steps to Run
 
-- 1️⃣ Clone or Download the Repository
+###1️⃣ Clone or Download the Repository
 
-- 2️⃣ Move Project Folder
+###2️⃣ Move Project Folder
 
 Place the project inside:
 
@@ -180,3 +180,24 @@ Note: Here your format will be localhost:PortNumber/file you kept the project/in
 You can create accounts manually but the Admin Account is hard coded inside config.php
 
 ---
+
+# 📚 What I Learned
+
+- Building a full-stack web application using PHP and MySQL
+- Implementing MVC architecture
+- Using AJAX for dynamic updates without page reload
+- Session management and role-based authentication
+- CRUD operations with database integration
+- Secure coding practices like password hashing and prepared statements
+- Team collaboration using Git and GitHub
+
+---
+
+# 🚀 Future Improvements
+- **Note there are few issues and corrupted features due to it being a merged project**
+- Add Google Maps integration
+- Add hotel and flight booking system
+- Improve UI/UX with modern frontend frameworks
+- Add real-time chat and notifications
+- Implement AI-based travel recommendations
+- Add multilingual support and responsive enhancements
