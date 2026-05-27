@@ -201,3 +201,10 @@ You can create accounts manually but the Admin Account is hard coded inside conf
 - Add real-time chat and notifications
 - Implement AI-based travel recommendations
 - Add multilingual support and responsive enhancements
+
+---
+
+# 🎥 Project Preview
+will be added soon
+![Project Preview](assets/demo.gif)
+[![Project Preview](assets/demo.gif)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
